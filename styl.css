@@ -17,11 +17,48 @@ html{
   align-items: center;
   justify-content: center;
 }
+button{
+  top: 0;
+  border-radius: 5px;
 
-section{
+}
+.card{
+  width: 95px;
+  height: 90px;
 
+}
+
+  .cback{
+  position: absolute;
+  width: 95px;
+  height: 90px;
+  transition: transform .3s;
+  background-color: blue;
+  backface-visibility: hidden;
+/*transform: perspective(500px) rotateY(0deg);*/
+}
+ .cfront{
+   position: absolute;
+   width: 95px;
+   height: 90px;
+   transition: transform .3s;
+   //background-color: red;
+   overflow: hidden;
+   margin: 0;
+
+ }
+
+/*div #img */.clicked{
+  transform: perspective(500px) rotateY(180deg);
+}
+
+#board{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
   width: 400px;
-  height: 50vh;
+  height: 60vh;
   border: 4px outset aquaMarine;
   margin: 5px;
   background-color: #ddd;
