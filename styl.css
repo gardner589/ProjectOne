@@ -24,41 +24,38 @@ button{
 }
 .card{
   width: 95px;
-  height: 90px;
-
+  height: 125px;
+  background-position: center;
+  border-radius:
 }
 
   .cback{
   position: absolute;
   width: 95px;
-  height: 90px;
-  transition: transform .3s;
+  height: 125px;
+  transition: transform .2s;
   background-color: blue;
   backface-visibility: hidden;
-/*transform: perspective(500px) rotateY(0deg);*/
 }
  .cfront{
    position: absolute;
    width: 95px;
-   height: 90px;
-   transition: transform .3s;
-   //background-color: red;
-   overflow: hidden;
+   height: 125px;
    margin: 0;
 
  }
 
-/*div #img */.clicked{
+.clicked{
   transform: perspective(500px) rotateY(180deg);
 }
 
 #board{
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
   width: 400px;
-  height: 60vh;
+  height: 70vh;
   border: 4px outset aquaMarine;
   margin: 5px;
   background-color: #ddd;
