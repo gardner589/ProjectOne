@@ -18,11 +18,10 @@ html{
   justify-content: center;
 }
 body{
-
   background: url('https://www.windsim.com/images/sky/sky_101.bmp') repeat ;
-  background-position: 100px;
+  background-position: 0px;
   left: 0;
-  animation: test 2s linear infinite;
+  /*animation: test 2s linear infinite;*/
 }
 button{
   top: 0;
@@ -33,7 +32,8 @@ button{
   width: 95px;
   height: 125px;
   background-position: center;
-    border-radius: 10%;
+  border-radius: 10%;
+  background-color: #999;
 }
 
   .cback{
@@ -63,11 +63,15 @@ button{
   justify-content: space-around;
   flex-wrap: wrap;
   width: 460px;
-  height: 90vh;
+  height: 90%;
   border: 6px inset maroon;
   box-shadow: 6px 6px 21px 6px #fff;
   margin: 5px;
-  //background-color: #999;
+  /*background-color: #999;*/
+}
+.found{
+  display: none;
+  visibility: hidden;
 }
 @keyframes test{
 
