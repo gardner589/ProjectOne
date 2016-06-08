@@ -45,12 +45,12 @@ button{
   backface-visibility: hidden;
   border-radius: 10%;
 }
- .cfront{
+ /*.cfront{
    position: absolute;
    width: 95px;
    height: 125px;
    margin: 0;
- }
+ }*/
 
 .clicked{
   transform: perspective(500px) rotateY(180deg);
