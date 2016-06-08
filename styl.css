@@ -45,12 +45,7 @@ button{
   backface-visibility: hidden;
   border-radius: 10%;
 }
- /*.cfront{
-   position: absolute;
-   width: 95px;
-   height: 125px;
-   margin: 0;
- }*/
+
 
 .clicked{
   transform: perspective(500px) rotateY(180deg);
@@ -73,9 +68,8 @@ button{
   display: none;
   visibility: hidden;
 }
-@keyframes test{
 
+@keyframes test{
   from{background-position: -900px;},
   to{background-position: -100px;}
-
 }

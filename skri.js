@@ -29,23 +29,23 @@ var elem = [];
 var last = [];
 $('.card').on('click', function(){
   c++;
-  console.log(c);
   var thisBG = $(this).css('background-image');
   var lastCard = last[last.length-1];
   last.push(thisBG);
   elem.push($(this));
   $(this).children().addClass('clicked');
+  if(elem.length == 2){
+      setTimeout(function(){
+        elem[elem.length-1].children().toggleClass('clicked');
+        elem[elem.length-2].children().toggleClass('clicked');
+        elem = [];
+        console.log("ayy")
+      }, 500);
+      if (thisBG == lastCard) {
+        elem[elem.length-1].children().toggleClass('found');
+        elem[elem.length-2].children().toggleClass('found');
+        c = 1;
+      }
 
-  if (thisBG == lastCard) {
-     elem[elem.length-1].children().toggleClass('found');
-     elem[elem.length-2].children().toggleClass('found');
-     c = 1;
-  }else if (c == 3){
-     $(this).parent().find('.cback').removeClass('clicked');
-     $(this).children().addClass('clicked');
-      c = 1;
     }
-      //timeer = setTimeout(function(){ $(this).find('.cback').toggleClass('clicked'); }, 100);
-
-
 })
