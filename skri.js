@@ -37,9 +37,9 @@ $('.card').on('click', function(){
       setTimeout(function(){
         elem[elem.length-1].children().toggleClass('clicked');
         elem[elem.length-2].children().toggleClass('clicked');
+        console.log("ayy");
         elem = [];
-        console.log("ayy")
-      }, 500);
+      }, 500)
       if (thisBG == lastCard) {
         elem[elem.length-1].children().toggleClass('found');
         elem[elem.length-2].children().toggleClass('found');
@@ -49,4 +49,10 @@ $('.card').on('click', function(){
 })
 $('button').on('click',function(){
   document.location.reload()
+})
+$('.card').on('mouseover', function(){
+  $(this).find('.cback').text('?')
+})
+$('.card').on('mouseout', function(){
+  $(this).find('.cback').text('')
 })
