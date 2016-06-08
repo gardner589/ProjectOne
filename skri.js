@@ -24,6 +24,7 @@ while (x<2){
   card.clone().css({'background-image': 'url("'+imgs[i]+'")', 'box-shadow':'-7px -7px 6px #777', 'border': '2px solid white'}).appendTo($board);
   }
 }
+var winray = 0;
 var elem = [];
 var last = [];
 $('.card').on('click', function(){
@@ -44,7 +45,12 @@ $('.card').on('click', function(){
         elem[elem.length-1].children().toggleClass('found');
         elem[elem.length-2].children().toggleClass('found');
         c = 1;
+        winray++;
       }
+      if(winray == 8){
+        alert("YOU WIN!");
+        $('h1').text("!!!GAME OVER!!! RESET? ->")
+      };
     }
 })
 $('button').on('click',function(){
