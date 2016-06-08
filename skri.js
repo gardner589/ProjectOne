@@ -18,11 +18,11 @@ function shuffle (array) {
   }
 }
 while (x<2){
+  shuffle(imgs);
+  x++;
   for (i = 0; i < imgs.length ;i++){
   card.clone().css({'background-image': 'url("'+imgs[i]+'")', 'box-shadow':'-7px -7px 6px #777', 'border': '2px solid white'}).appendTo($board);
   }
-  x++;
-  shuffle(imgs);
 }
 var elem = [];
 var last = [];
