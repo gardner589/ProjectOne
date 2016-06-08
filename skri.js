@@ -1,7 +1,6 @@
 var $board = $('#board');
 var $cback = $('.cback');
 var $clicked = $('.clicked');
-var $card = $('.card');
 var c = 0;
 var x = 0;
 var card = $('<div class="card"><div class="cback"></div></div>');
@@ -46,6 +45,8 @@ $('.card').on('click', function(){
         elem[elem.length-2].children().toggleClass('found');
         c = 1;
       }
-
     }
+})
+$('button').on('click',function(){
+  document.location.reload()
 })

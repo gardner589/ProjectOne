@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+
 *{
 font-size:inherit;
 font-weight:inherit;
@@ -18,14 +20,22 @@ html{
   justify-content: center;
 }
 body{
-  background: url('https://www.windsim.com/images/sky/sky_101.bmp') repeat ;
+  background: url('https://www.windsim.com/images/sky/sky_101.bmp')  ;
+  background-size: cover;
   background-position: 0px;
   left: 0;
   /*animation: test 2s linear infinite;*/
 }
-button{
+h1{
   top: 0;
   border-radius: 5px;
+  text-align: center;
+  font-size: 45px;
+  color: maroon;
+  font-family: Oswald;
+  margin: 0;
+  padding: 0;
+  text-shadow: 2px 2px 4px white;
 
 }
 .card{
@@ -49,6 +59,26 @@ button{
 
 .clicked{
   transform: perspective(500px) rotateY(180deg);
+}
+
+button{
+  position: absolute;
+  top: 2%;
+  right: 10%;
+  width: 15vw;
+  height: 8vh;
+  color: white;
+  font-family: Oswald;
+  background-color:inherit;
+  border-radius: 50%;
+  border: 3px inset #ccc;
+}
+button:hover {
+  border: 3px inset maroon;
+  text-shadow: 2px 2px 4px white;
+  box-shadow: 6px 4px 21px 4px #fff;
+  color: maroon;
+
 }
 
 #board{
