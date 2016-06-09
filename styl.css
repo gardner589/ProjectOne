@@ -13,7 +13,6 @@ text-decoration: none;
 #BG{
   min-width: 100%;
   position: absolute;
-  animation: test 1s linear infinite;
   color: white;
   left: 50px;
 }
@@ -76,13 +75,15 @@ button{
   position: absolute;
   top: 2%;
   right: 10%;
-  width: 15vw;
+  width: 10vw;
   height: 8vh;
   color: white;
+  text-shadow: 2px 2px 4px maroon;
   font-family: Oswald;
   background-color:inherit;
   border-radius: 50%;
-  border: 3px inset #ccc;
+  border: .5px solid #ccc;
+  animation: test 5s linear alternate infinite;
 }
 button:hover {
   border: 3px inset maroon;
@@ -112,6 +113,6 @@ button:hover {
 }
 
 @keyframes test{
-  from {left: 100%;},
-  to {left: 20%; }
+  from {color: maroon; text-shadow: 2px 2px 4px white;border: 2px solid #222;},
+  to {color: white; text-shadow: 2px 2px 4px maroon;border: .5px solid #ccc;}
 }

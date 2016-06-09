@@ -24,16 +24,35 @@ while (x<2){
   card.clone().css({'background-image': 'url("'+imgs[i]+'")', 'box-shadow':'-7px -7px 6px #777', 'border': '2px solid white'}).appendTo($board);
   }
 }
-var winray = 0;
+var winr = 0;
 var elem = [];
 var last = [];
+var idCheckr = [];
 $('.card').on('click', function(){
   c++;
+  if( !($(this).attr('id')) ){
+    for (i = 0; i < 200; i++){
+      rand = Math.floor((Math.random()*i)+1);
+      $(this).attr('id','F'+rand)
+      $(this).toggleClass('clicked')
+    }
+  }
+if(idCheckr[idCheckr.length-1] == $(this).attr('id')){
+  $(this).children().toggleClass('clicked')
+  $(this).children().removeClass('found')
+  elem.pop()
+}else{
+  idCheckr.push($(this).attr('id'))
+}
+  console.log($(this).attr('id'))
+  console.log(idCheckr)
+  console.log(elem)
+
   var thisBG = $(this).css('background-image');
   var lastCard = last[last.length-1];
   last.push(thisBG);
   elem.push($(this));
-  $(this).children().addClass('clicked');
+  $(this).children().toggleClass('clicked');
   if(elem.length == 2){
       setTimeout(function(){
         elem[elem.length-1].children().toggleClass('clicked');
@@ -45,11 +64,11 @@ $('.card').on('click', function(){
         elem[elem.length-1].children().toggleClass('found');
         elem[elem.length-2].children().toggleClass('found');
         c = 1;
-        winray++;
+        winr++;
       }
-      if(winray == 8){
+      if(winr == 8){
         alert("YOU WIN!");
-        $('h1').text("!!!GAME OVER!!! RESET? ->")
+        $('h1').text("!GAME OVER! RESET? ->")
       };
     }
 })
