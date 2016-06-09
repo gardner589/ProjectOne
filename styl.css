@@ -64,6 +64,7 @@ h1{
   transition: transform .8s;
   background-color: maroon;
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   border-radius: 10%;
 }
 
