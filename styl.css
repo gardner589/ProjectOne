@@ -10,11 +10,13 @@ color:inherit;
 text-decoration: none;
 }
 
-#BG{
-  min-width: 100%;
+img{
+  width: 20%;
   position: absolute;
   color: white;
-  left: 50px;
+  left: 0;
+  top: 0;
+  z-index: -2000;
 }
 
 html{
@@ -26,7 +28,7 @@ html{
   justify-content: center;
 }
 body{
-  background: url('https://www.windsim.com/images/sky/sky_101.bmp')  ;
+  background: url('msf-showdown.png')  ;
   background-size: cover;
   background-position: 0px;
   left: 0;
@@ -46,9 +48,10 @@ h1{
 .card{
   width: 95px;
   height: 125px;
-  background-position: center;
+  background-position: center center;
   border-radius: 10%;
   background-color: #999;
+  background-repeat: space;
 }
 
   .cback{
@@ -121,4 +124,6 @@ button:hover {
     text-shadow: 2px 2px 4px maroon;
     border: .5px solid #ccc;
   }
+}
+
 }
