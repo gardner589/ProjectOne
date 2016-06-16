@@ -1,6 +1,8 @@
+// AM: We usually don't want to pollute the global name space. A good move here would be to encapsulate everything into a larger `game` object or wrap everything in a `$(document).ready()`.
 var $board = $('#board');
 var $cback = $('.cback');
 var $clicked = $('.clicked');
+// AM: I would rename `c` and `x` so that it's clear what the purpose of each variable is.
 var c = 0;
 var x = 0;
 var card = $('<div class="card"><div class="cback"></div></div>');
@@ -17,6 +19,8 @@ function shuffle(array) {
         array[j] = temp
     }
 }
+// AM: I see that your "Reload" feature initiates a hard refresh of the page.
+// AM: This is looking ahead, but perhaps you could encapsulate the below code in a function so that you can re-use it when the user wants to replay the game and not have to refresh the page.
 while (x < 2) {
     shuffle(imgs);
     x++;
@@ -32,7 +36,13 @@ var winr = 0;
 var elem = [];
 var last = [];
 var idCheckr = [];
+// AM: I know we talked about it IRL, but did you try implementing a click limiter variable so that it's not possible to flip more than two cards in a turn?
+// AM: Imagine a `var cantClick = false` that is set to true after two cards are flipped. It's only set back to false once you're done comparing those two cards.
+// AM: That means you would need to wrap a lot (if not all) of the code in the below event listener in an if statement along the lines of if(!cantClick){ ... }
+// AM: Happy to go over this in person.
 $('.card').on('click', function() {
+  // AM: It might be useful to encapuslate some of the below code into functions so it's a bit more readable.
+  // AM: You could separate those functions according to functionality/purpose.
     c++;
     if (($(this).attr('id','')) || !($(this).attr('id'))) {
         for (i = 0; i < 200; i++) {
@@ -86,3 +96,5 @@ $('.card').on('mouseover', function() {
 $('.card').on('mouseout', function() {
     $(this).find('.cback').text('')
 })
+
+// AM: Kudos on keeping your code very DRY.
