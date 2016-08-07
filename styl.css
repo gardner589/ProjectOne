@@ -32,6 +32,7 @@ body{
   background-size: cover;
   background-position: 0px;
   left: 0;
+  padding-left: 80px;
 }
 h1{
   top: 0;

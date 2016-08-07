@@ -60,7 +60,7 @@ $('.card').on('click', function() {
             elem[elem.length - 2].children().toggleClass('clicked');
             console.log("ayy");
             elem = [];
-            elem[elem.length-1].attr('id', undefined)
+            elem[elem.length-1].attr('id', '')
         }, 500)
         if (thisBG == lastCard) {
             elem[elem.length - 1].children().toggleClass('found');
