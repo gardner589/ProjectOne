@@ -48,9 +48,6 @@ $('.card').on('click', function() {
     } else {
         idCheckr.push($(this).attr('id'))
     }
-    console.log($(this).attr('id'))
-    console.log(idCheckr)
-    console.log(elem)
 
     var thisBG = $(this).css('background-image');
     var lastCard = last[last.length - 1];
